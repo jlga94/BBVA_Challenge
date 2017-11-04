@@ -1,0 +1,300 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="content-group">
+
+                         <div class="text-center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#modal_theme_info">Send New Invitation
+                                </button>
+                         </div>
+                         <br />
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table datatable-responsive" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Accion</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                            <td>
+                                               <button type="button" class="btn btn-success" disabled >Valid</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>2.-</b></td>
+                                            <td>jony2@gmail.com</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                            <td>
+                                               <button type="button" class="btn btn-success" disabled >Valid</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>3.-</b></td>
+                                            <td>jony3@gmail.com</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-success" disabled >Valid</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>4.-</b></td>
+                                            <td>jony4@gmail.com</td>
+                                            <td><span class="label label-info">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-primary sweet_warning">Reenviar
+                                                    Codigo
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>5.-</b></td>
+                                            <td>jony5@gmail.com</td>
+                                            <td><span class="label label-info">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-primary sweet_warning">Reenviar
+                                                    Codigo
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>6.-</b></td>
+                                            <td>jony6@gmail.com</td>
+                                            <td><span class="label label-info">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-primary sweet_warning">Reenviar
+                                                    Codigo
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>7.-</b></td>
+                                            <td>jony7@gmail.com</td>
+                                            <td><span class="label label-info">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-primary sweet_warning">Reenviar
+                                                    Codigo
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Info modal -->
+                        <div id="modal_theme_info" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-info">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h6 class="modal-title">Enviar Invitaciones</h6>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="#" class="main-search">
+                                            <div class="input-group content-group">
+                                                <div class="has-feedback has-feedback-left">
+                                                    <input type="text" class="form-control input-xlg"
+                                                           value="jorge@kasperu.com">
+                                                    <div class="form-control-feedback">
+                                                        <i class="icon-mention text-muted text-size-base"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group-btn">
+                                                    <button type="submit" class="btn btn-primary btn-xlg">Enviar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer text-center">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------->
+                        <!-- Info modal2 -->
+                        <div id="modal_theme_info2" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-info">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h6 class="modal-title">Editar Invitacion</h6>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label>Email:</label>
+                                                        <input type="text" class="form-control"
+                                                               value="jorge@kasperyu.com" disabled readonly>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Compañia:</label>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control" disabled>
+                                                            <option value="AK">BCP</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Rol:</label>
+                                                        <select multiple="multiple"
+                                                                class="form-control listbox-filter-disabled">
+                                                            <option value="AK">Invitador</option>
+                                                            <option value="HI">Transacion</option>
+                                                            <option value="HI">Operador</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-info">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------->
+
+                        <!-- Info modal3-->
+                        <div id="modal_theme_info3" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-info">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h6 class="modal-title">Enviar Invitaciones</h6>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label>Email:</label>
+
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="icon-mention"></i></span>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Compañia:</label>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option></option>
+                                                            <option value="AK">BCP</option>
+                                                            <option value="HI">INTERBANK</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-info">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------->
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock sidebar1_page %}
+
+
+
+{% block js_plugins_after %}
+    <script src="{% static 'themes/global/tables/datatables/datatables.min.js' %}"></script>
+    <script src="{% static 'themes/global/forms/inputs/duallistbox.min.js' %}"></script>
+
+
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+
+
+    <script>
+        $(function () {
+
+            $('.sweet_warning').on('click', function () {
+                swal({
+                     title: "Esta tu seguro?",
+                    text: "Deseas enviar un nuevo Token!",
+                    type: "info",
+                    showCancelButton: true,
+                    confirmButtonText: "Si, enviar",
+                    cancelButtonText: "No, cancelar",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                         swal("Enviar!", "Se envio un nuevo Token.", "success");
+                    }
+                });
+
+            });
+
+
+            $('.listbox-filter-disabled').bootstrapDualListbox({
+                showFilterInputs: false,
+                infoTextEmpty: 'Lista vacia',
+            });
+        });
+    </script>
+    <script src="{% static 'themes/pages/user/profile/user_invited.js' %}"></script>
+{% endblock js_plugins_before %}
+

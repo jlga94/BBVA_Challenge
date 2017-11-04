@@ -1,0 +1,115 @@
+{% extends "themes/pages/user/profile/partial/base_user.html" %}
+{% load i18n %}
+{% load static %}
+{% load filter %}
+
+{% block content_user %}
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h3 class="panel-title">Personal Informacion<a
+                    class="heading-elements-toggle"><i class="icon-more"></i></a>
+            </h3>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li><a data-action="reload"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+{#                            {{ profile_form.first_name.label_tag }}#}
+{#                            {{ profile_form.first_name|add_class_form_control }}#}
+
+                        </div>
+                        <div class="col-md-6">
+{#                            {{ profile_form.last_name.label_tag }}#}
+{#                            {{ profile_form.last_name|add_class_form_control }}#}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+{#                            {{ profile_form.gender_type.label_tag }}#}
+{#                            {{ profile_form.gender_type|add_class_form_control }}#}
+
+                        </div>
+
+                        <div class="col-md-6">
+{#                            {{ profile_form.space_plan.label_tag }}#}
+{#                            {{ profile_form.space_plan|add_class_form_control }}#}
+
+                        </div>
+                    </div>
+                </div>
+
+{#                <div class="form-group">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-4">#}
+{#                            {{ profile_form.country.label_tag }}#}
+{#                            {{ profile_form.country|add_class_form_control }}#}
+{##}
+{#                        </div>#}
+{#                        <div class="col-md-4">#}
+{#                            {{ profile_form.state.label_tag }}#}
+{#                            {{ profile_form.state|add_class_form_control }}#}
+{##}
+{#                        </div>#}
+{#                        <div class="col-md-4">#}
+{#                            {{ profile_form.city.label_tag }}#}
+{#                            {{ profile_form.city|add_class_form_control }}#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+{#                <div class="form-group">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-6">#}
+{#                            {{ profile_form.mobile_phone.label_tag }}#}
+{#                            {{ profile_form.mobile_phone|add_class_form_control }}#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-md-6">#}
+{#                            {{ profile_form.home_phone.label_tag }}#}
+{#                            {{ profile_form.home_phone|add_class_form_control }}#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+{#                <div class="form-group">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-6">#}
+{#                             {{ profile_form.logo_profile.label_tag }}#}
+{#                            {{ profile_form.logo_profile|add_class_form_file }}#}
+{#                            <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Save </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content_user %}
+
+
+{% block js_plugins_after %}
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script>
+        $(function () {
+            $('#country').select2();
+        });
+    </script>
+{% endblock js_plugins_before %}
+
+

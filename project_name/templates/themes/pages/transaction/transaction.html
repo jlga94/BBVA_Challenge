@@ -1,0 +1,208 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="content-group">
+
+                         <div class="text-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal_theme_info">Add Transaction
+                            </button>
+                        </div>
+                        <br>
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Listado transacciones<a
+                                        class="heading-elements-toggle"><i class="icon-more"></i></a>
+                                </h3>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <div class="table-responsive">
+                                    <table class="table datatable-responsive">
+                                        <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Email</th>
+                                            <th>solicitado</th>
+                                            <th>monto soles</th>
+                                            <th>monto Dollar</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>500 coin</td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td><span class="label label-success">proceso</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>600 coin</a></td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td><span class="label label-success">Anulado</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>600 coin</a></td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>600 coin</a></td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>600 coin</a></td>
+                                            <td>0</td>
+                                            <td>200</td>
+                                            <td><span class="label label-success">Proceso</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>PLAN ORO</a></td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>1.-</b></td>
+                                            <td>jony1@gmail.com</td>
+                                            <td>PLAN BRONZE</a></td>
+                                            <td>0</td>
+                                            <td>200</td>
+                                            <td><span class="label label-success">Anulado</span></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                            <div id="modal_theme_info" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-info">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h6 class="modal-title">Editar Invitacion</h6>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <label>Solicitado:</label>
+                                                            <input type="text" class="form-control"
+                                                                   value="jorge@kasperyu.com" disabled readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <label>My Compañia:</label>
+                                                            <select data-placeholder="Select your state"
+                                                                    class="select form-control">
+                                                                <option></option>
+                                                                <option value="AK">BCP</option>
+                                                                <option value="HI">INTERBANK</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Card Number:</label>
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>cvc:</label>
+                                                                <input type="text" class="form-control">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                        <label>Expires:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                        <label>Monto:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-info">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock sidebar1_page %}
+
+
+
+{% block js_plugins_after %}
+    <script src="{% static 'themes/global/tables/datatables/datatables.min.js' %}"></script>
+    <script src="{% static 'themes/global/forms/inputs/duallistbox.min.js' %}"></script>
+
+
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+
+
+    <script>
+        $(function () {
+
+        });
+    </script>
+    <script src="{% static 'themes/pages/user/profile/user_invited.js' %}"></script>
+{% endblock js_plugins_before %}
+

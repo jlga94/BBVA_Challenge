@@ -1,0 +1,165 @@
+{% extends "themes/pages/user/profile/partial/base_user.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content_user %}
+
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tree Company with project (size)</h3>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="tree-sorting well border-left-success border-left-lg">
+                <ul>
+                    <li>Empresa 1
+                        <ul>
+                            <li>project x (2GB)
+                                <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                            </li>
+                           <li>project x (5GB)
+                              <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                           </li>
+                        </ul>
+                    </li>
+                    <li>Empresa 2
+                        <ul>
+                            <li>project x (2GB)
+                            <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                            </li>
+                           <li>project x (5GB)
+                           <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                           </li>
+                        </ul>
+                    </li>
+                    <li>Empresa 3
+                        <ul>
+                            <li>project x (2GB)
+                            <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                            </li>
+                           <li>project x (5GB)
+                           <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                           </li>
+                        </ul>
+                    </li>
+                    <li>Empresa 4
+                        <ul>
+                            <li>project x (2GB)
+                            <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul>
+                            </li>
+                           <li>project x (5GB)
+                           <ul>
+                                    <li>Dataset 1</li>
+                                    <li>Dataset 2</li>
+                                </ul></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-flat">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                <i class="icon-enter6 icon-3x text-success-400"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <h3 class="no-margin text-semibold text-center">5</h3>
+                                <span class="text-uppercase text-size-mini text-muted">total Empresa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                <i class="icon-enter6 icon-3x text-success-400"></i>
+                            </div>
+
+                            <div class="media-body text-right">
+                                <h3 class="no-margin text-semibold text-center">15</h3>
+                                <span class="text-uppercase text-size-mini text-muted">total projectos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                <i class="icon-enter6 icon-3x text-success-400"></i>
+                            </div>
+
+                            <div class="media-body text-right">
+                                <h3 class="no-margin text-semibold">500 </h3>
+                                <span class="text-uppercase text-size-mini text-muted">total Dataset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                <i class="icon-enter6 icon-3x text-success-400"></i>
+                            </div>
+
+                            <div class="media-body text-right">
+                                <h3 class="no-margin text-semibold">10 </h3>
+                                <span class="text-uppercase text-size-mini text-muted">total GB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content_user %}
+
+{% block js_plugins_after %}
+    <script src="{% static "themes/global/core/libraries/jquery_ui/core.min.js" %}"></script>
+    <script src="{% static "themes/global/core/libraries/jquery_ui/effects.min.js" %}"></script>
+    {#    <script src="{% static "themes/global/core/libraries/jquery_ui/interactions.min.js" %}"></script>#}
+
+    <script src="{% static 'themes/global/trees/fancytree_all.min.js' %}"></script>
+    <script src="{% static 'themes/global/trees/fancytree_childcounter.js' %}"></script>
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script>
+        $(function () {
+            $(".tree-sorting").fancytree();
+        });
+    </script>
+{% endblock js_plugins_before %}

@@ -1,0 +1,137 @@
+{% extends "themes/pages/user/profile/partial/base_user.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content_user %}
+
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h3 class="panel-title">Invitados<a
+                        class="heading-elements-toggle"><i class="icon-more"></i></a>
+                </h3>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li><a data-action="collapse"></a></li>
+                        <li><a data-action="reload"></a></li>
+                        <li><a data-action="close"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="table-responsive">
+                <table class="table datatable-responsive">
+                    <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Email</th>
+                        <th>Full Name</th>
+                        <th>Company</th>
+                        <th>Rol</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>ADM | DATOS | OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>ADM | DATOS </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>ADM | DATOS | OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>ADM | DATOS | OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                         <td>ADM | DATOS </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                         <td>ADM | DATOS </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                       <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                         <td>ADM | DATOS </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>ADM | DATOS | OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                        <td>OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                       <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                         <td>OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    <tr>
+                       <td><b>1.-</b></td>
+                        <td>jony1@gmail.com</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>BCP</td>
+                         <td>OPERADOR </td>
+                        <td><span class="label label-success">Active</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+{% endblock content_user %}
+
+{% block js_plugins_after %}
+    <script src="{% static 'themes/global/tables/datatables/datatables.min.js' %}"></script>
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script src="{% static 'themes/pages/user/profile/user_invited.js' %}"></script>
+{% endblock js_plugins_before %}

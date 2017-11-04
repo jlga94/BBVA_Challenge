@@ -1,0 +1,218 @@
+{% extends "themes/pages/user/profile/partial/base_user.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content_user %}
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h3 class="panel-title">Agregar Empresas<a
+                    class="heading-elements-toggle"><i class="icon-more"></i></a>
+            </h3>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li><a data-action="collapse"></a></li>
+                    <li><a data-action="reload"></a></li>
+                    <li><a data-action="close"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <form action="#">
+                <div class="form-group">
+                    <label class="display-block">Tipo Documento:</label>
+
+                    <label class="radio-inline">
+                        <input type="radio" class="styled" name="gender" checked="checked">
+                        Natural
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" class="styled" name="gender">
+                        Juridico
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Ruc</label>
+                            <input type="text" value="12015121212" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Nombre</label>
+                            <input type="text" value="Eugene" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Agregar<i
+                            class="icon-arrow-right14 position-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h6 class="panel-title">Lista Empresas<a
+                    class="heading-elements-toggle"><i class="icon-more"></i></a>
+            </h6>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li><a data-action="collapse"></a></li>
+                    <li><a data-action="reload"></a></li>
+                    <li><a data-action="close"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table datatable-responsive">
+                    <thead>
+                    <tr>
+                        <th>Tipo Documento</th>
+                        <th>Numero</th>
+                        <th>Name</th>
+                        <th>Estado</th>
+                        <th>Accion</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                          <td><button class="btn btn-primary">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                           <td><button class="btn btn-primary">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">JURIDICO</a></td>
+                         <td>11111111111</td>
+                        <td><a href="#">JURIDICO</a></td>
+                        <td>Activo</td>
+                        <td>
+                            <button class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content_user %}
+
+
+{% block js_plugins_after %}
+        <script src="{% static 'themes/global/tables/datatables/datatables.min.js' %}"></script>
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script>
+        $(function () {
+            $('#country').select2();
+        });
+    </script>
+        <script src="{% static 'themes/pages/user/profile/user_invited.js' %}"></script>
+{% endblock js_plugins_before %}
+

@@ -1,0 +1,174 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="content-group">
+
+
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">Dataset</h6>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="collapse"></a></li>
+                                        <li><a data-action="reload"></a></li>
+                                        <li><a data-action="close"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs nav-tabs-highlight nav-justified">
+                                        <li class="active"><a href="#top-justified-divided-tab1" data-toggle="tab">Cargar
+                                            Archivo WEB <i class="icon-database position-right"></i></a></li>
+                                        <li><a href="#top-justified-divided-tab2" data-toggle="tab">Cargar Via FTP <i
+                                                class="icon-database-insert position-right"></i></a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="top-justified-divided-tab1">
+
+                                            <form action="#">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-striped active"
+                                                                 style="width: 50%">
+                                                                <span>50% Complete</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-10 col-md-offset-1">
+
+                                                            <div class="form-group">
+                                                                <label>Cargar archivo 10000GB:</label>
+                                                                <div class="uploader">
+                                                                    <input type="file" class="file-styled"/>
+                                                                </div>
+                                                                <span class="help-block">Accepted formats: csv</span>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Nombre:</label>
+                                                                <input type="text" class="form-control"
+                                                                       placeholder="Nombre del cvs">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Formato:</label>
+                                                                <input type="password" class="form-control"
+                                                                       placeholder="formato">
+                                                            </div>
+
+
+                                                            <div class="form-group">
+                                                                <label>Descripcion:</label>
+                                                                <textarea rows="5" cols="5" class="form-control"
+                                                                          placeholder="descripcion"></textarea>
+                                                            </div>
+
+                                                            <div class="text-right">
+                                                                <button type="submit" class="btn btn-primary">Submit
+                                                                    form
+                                                                    <i class="icon-arrow-right14 position-right"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                        <div class="tab-pane" id="top-justified-divided-tab2">
+
+                                             <form action="#">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-striped active"
+                                                                 style="width: 50%">
+                                                                <span>50% Complete</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-10 col-md-offset-1">
+                                                           <div class="form-group">
+                                                                 <button type="button" data-loading-text="<i class='icon-spinner4 spinner position-left'></i> Loading state"
+                                                                         class="btn btn-default btn-loading"> <i class="icon-spinner4 position-left"></i>
+                                                                         Generado acceso
+                                                                 </button>
+                                                            </div>
+                                                            <div id="access_ftp" class="row hidden">
+                                                                <div class="form-group">
+                                                                    <label>Usuario FTP:</label>
+                                                                    <input type="text" class="form-control" value="KAS">
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label>Password FTP:</label>
+                                                                     <input type="text" class="form-control" value="123456">
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label>Ip FTP:</label>
+                                                                     <input type="text" class="form-control"  value="192.168.1.1">
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label>Cadena de conexion:</label>
+                                                                    <input type="text" class="form-control" value="ftp://KAS:123456@192.168.1.1">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock sidebar1_page %}
+
+
+
+{% block js_plugins_after %}
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script>
+    $('.btn-loading').click(function () {
+        var btn = $(this);
+        btn.button('loading');
+        setTimeout(function () {
+            btn.button('reset');
+            $("#access_ftp").removeClass('hidden');
+        }, 3000)
+    });
+
+    </script>
+{% endblock js_plugins_before %}
+
