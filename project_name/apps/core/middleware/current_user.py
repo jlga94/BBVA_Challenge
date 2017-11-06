@@ -2,7 +2,7 @@ import threading
 
 from django.conf import settings
 from django.utils.deprecation import MiddlewareMixin
-
+#from .utils import MiddlewareMixin
 
 class UserMiddleware(MiddlewareMixin):
     __users = {}

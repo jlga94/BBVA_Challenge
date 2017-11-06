@@ -36,6 +36,7 @@ LOCAL_APPS = (
     'project_name.apps.module.apps.ModuleConfig',
     'project_name.apps.user.apps.UserConfig',
     'project_name.apps.audit.apps.AuditConfig',
+    'project_name.apps.help.apps.HelpConfig',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -52,6 +53,7 @@ MIDDLEWARE = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'project_name.apps.core.middleware.current_audit.AuditMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'project_name.config.urls'

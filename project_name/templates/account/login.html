@@ -46,8 +46,8 @@
                                 <div class="icon-object border-slate-300 text-slate-300">
                                     <img class="img-responsive img-thumbnail img-circle" src="{% static "themes/logo/logo_login.png" %}" alt="">
                                 </div>
-                                <h5 class="content-group">{% trans 'Login to your account' %}
-                                    <small class="display-block">{% trans 'Enter your credentials below' %}</small>
+                                <h5 class="content-group">{% trans 'Iniciar sesión' %}
+                                    <small class="display-block">{% trans 'Ingrese sus credenciales' %}</small>
                                 </h5>
                             </div>
                             <div class="form-group has-feedback has-feedback-left">
@@ -71,12 +71,12 @@
 											<div class="checker">
                                                  {{ form.remember|add_class:"styled" }}
                                             </div>
-											Remember
+											Recordar
 										</label>
 									</div>
 
 									<div class="col-sm-6 col-md-7 text-right">
-										<a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+										<a href="{% url 'account_reset_password' %}">{% trans "Olvidó su contraseña?" %}</a>
 									</div>
 								</div>
 							</div>
@@ -95,7 +95,7 @@
                         </div>
                     </form>
                     <div class="footer text-muted text-center">
-						KassPeru © 2015.
+						EVM Construcción © 2017.
 					</div>
                 </div>
             {% endblock sidebar_page_content %}

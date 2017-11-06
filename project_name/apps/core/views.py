@@ -1,8 +1,6 @@
 from django.conf import settings
 from django.shortcuts import redirect
-
 from .mixins import TemplateLoginRequiredMixin
-
 
 class IndexView(TemplateLoginRequiredMixin):
     template_name = 'themes/pages/home/home.html'

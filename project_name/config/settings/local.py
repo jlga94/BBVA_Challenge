@@ -3,7 +3,10 @@ from .settings import *
 env_file = str(PROJECT_ROOT.path('security/environ_local.env'))
 environ.Env.read_env(str(env_file))
 
-DEBUG = env.bool('DEBUG')
+#DEBUG = env.bool('DEBUG')
+DEBUG = True
+
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '*']
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG

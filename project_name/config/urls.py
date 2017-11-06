@@ -15,6 +15,7 @@ urlpatterns = i18n_patterns(
     url(r'^', include('project_name.apps.user.urls', namespace="user_app")),
     url(r'^', include('project_name.apps.dataset.urls', namespace="dataset_app")),
     url(r'^', include('project_name.apps.project.urls', namespace="project_app")),
+    url(r'^', include('project_name.apps.help.urls', namespace="help_app")),
     url(r'^', include('project_name.apps.guest.urls', namespace="guest_app")),
     url(r'^', include('project_name.apps.transaction.urls', namespace="transaction_app")),
     url(r'^', include('project_name.apps.team.urls', namespace="team_app")),

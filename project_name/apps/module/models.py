@@ -1,8 +1,6 @@
 from django.db import models
-
 from project_name.apps.core.models import Role, Permission
 from project_name.apps.core.utils.fields import BaseModel
-
 
 class Module(BaseModel):
     name = models.CharField(max_length=200, null=True, blank=True)

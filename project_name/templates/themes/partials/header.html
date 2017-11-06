@@ -5,7 +5,7 @@
 {% get_available_languages as languages %}
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="javascript:void(0)">{{ project_name }}</a>
+        <a class="navbar-brand" href="javascript:void(0)">EVM CONSTRUCCION{{ project_name }}</a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -17,7 +17,7 @@
         <ul class="nav navbar-nav">
             <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a>
             </li>
-            <li>
+            <!--li>
 					<a class="sidebar-control sidebar-detached-hide hidden-xs" data-popup="tooltip" title="" data-placement="bottom" data-container="body" data-original-title="Hide detached">
 						<i class="icon-drag-right"></i>
 					</a>
@@ -32,7 +32,7 @@
                 <a href="javascript:void(0)">
                     <span class="label label-inline bg-warning-400 position-right"> Consumed (10GB)</span>
                 </a>
-            </li>
+            </li-->
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -54,12 +54,12 @@
             <li class="dropdown dropdown-user">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <img src="{{ user.get_profile.get_logo_profile_url }}" >
-                    <span>{{ user }}</span>
+                    <span>{{ user.name }}</span>
                     <i class="caret"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
                      <li><a href="{% url 'user_app:profile' uuid=user.get_profile.uid %}"><i class="icon-user"></i> Perfil</a></li>
-                    <li><a href="{% url 'account_logout' %}"><i class="icon-switch2"></i> Logout</a></li>
+                    <li><a href="{% url 'account_logout' %}"><i class="icon-switch2"></i> Salir</a></li>
                 </ul>
             </li>
         </ul>
