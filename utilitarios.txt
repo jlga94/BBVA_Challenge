@@ -1,0 +1,9 @@
+#debugeador
+<div id="django-debug"> <pre> {% filter force_escape %} {% debug %} {% endfilter %} </pre> </div>
+#for
+{% for item in execution_log %} 
+    {{ item.type }} 
+    {{ item.title }}
+    {{ item.description }}
+    .....
+{% endfor %}

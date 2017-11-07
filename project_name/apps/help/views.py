@@ -30,7 +30,6 @@ class HelpListView(TemplateView):
     def get_context_data(self, **kwargs):
 
         context = super().get_context_data(**kwargs)
-        context["help"] = models.Help.objects.viewable_posts(
-                self.request.user)
+        context["help"] = models.Help.objects.all()
         
         return context

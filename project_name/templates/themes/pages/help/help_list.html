@@ -3,8 +3,7 @@
 {% load static %}
 
 {% block sidebar1_page %}
-
-    <div id="django-debug"> <pre> {% filter force_escape %} {% debug %} {% endfilter %} </pre> </div>
+    
     <div class="container-detached">
         <div class="content-detached">
             <div class="panel panel-flat">
@@ -22,39 +21,17 @@
                                 <table class="table table-bordered table-hover datatable-highlight">
                                     <thead>
                                     <tr>
-                                        <th>Nombre</th>
-                                        <th>dataset reference</th>
-                                        <th>descripcion</th>
-                                        <th>Status</th>
+                                        <th>Concepto</th>
+                                        <th>Definición</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>Project {1}</td>
-                                        <td>Dataset {1}</td>
-                                        <td></td>
-                                        <td><span class="label label-success">Active</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project {2}</td>
-                                        <td>Dataset {1}</td>
-                                        <td>Traffic Court Referee</td>
-                                        <td><span class="label label-success">Active</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project {3}</td>
-                                        <td>Dataset {2}</td>
-                                        <td>Traffic Court Referee</td>
-                                        <td><span class="label label-success">Active</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project {4}</td>
-                                        <td>Dataset {3}</td>
-                                        <td></td>
-                                        <td><span class="label label-success">Active</span></td>
-                                    </tr>
-
-
+                                    {% for item in help %} 
+                                        <tr>
+                                            <td>{{ item.name }} </td>
+                                            <td>{{ item.tagline }}</td>                                            
+                                        </tr>      
+                                    {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
@@ -67,8 +44,6 @@
     </div>
 
 {% endblock sidebar1_page %}
-
-
 
 {% block js_plugins_after %}
 {% endblock js_plugins_after %}
