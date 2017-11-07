@@ -92,3 +92,6 @@ ENV/
 *.key
 /node_modules/
 /project_name/run/static/
+
+#sqlite
+sqlite.db
