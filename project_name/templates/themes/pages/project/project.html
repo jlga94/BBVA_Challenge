@@ -21,7 +21,7 @@
 
                             <form class="stepy-clickable form-horizontal" action="#">
                                 <fieldset title="1">
-                                    <legend class="text-semibold">Project</legend>
+                                    <legend class="text-semibold">Datos Generales</legend>
 
                                     <div class="row">
                                         <div class="col-md-10 col-md-offset-1">
@@ -41,6 +41,48 @@
                                                                       placeholder="Enter your message here"></textarea>
                                                     </div>
                                                 </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Periodo de control:</label>
+                                                    <div class="col-lg-4">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="2017-2">
+                                                    </div>
+                                                    <label class="col-lg-2 control-label">contratista:</label>
+                                                    <div class="col-lg-4">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="2017-2">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Residente:</label>
+                                                    <div class="col-lg-4">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="Nombre">
+                                                    </div>
+                                                    <label class="col-lg-2 control-label">Supervisor:</label>
+                                                    <div class="col-lg-4">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-vertical">             
+                                                    <div class="col-lg-4">
+                                                        <label class="control-label">Plazo de ejecución:</label>
+                                                        <input type="text" class="form-control"
+                                                               placeholder="Nombre">
+                                                    </div>                                                    
+                                                    <div class="col-lg-4">
+                                                        <label class="control-label">Fecha de Inicio:</label>
+                                                        <input type="datetime-local" class="form-control"
+                                                               placeholder="Nombre">
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-4">
+                                                        <label class="control-label">Fecha de Termino:</label>
+                                                        <input type="datetime-local" class="form-control"
+                                                               placeholder="Nombre">
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -49,131 +91,120 @@
                                 </fieldset>
 
                                 <fieldset title="2">
-                                    <legend class="text-semibold">Dataset</legend>
+                                    <legend class="text-semibold">Costo Presupuestado</legend>
 
                                     <div class="row">
-                                        <div class="col-md-10 col-md-offset-1">
-                                            <div class="tabbable">
-                                                <ul class="nav nav-tabs nav-tabs-highlight nav-justified">
-                                                    <li class="active"><a href="#top-justified-divided-tab1"
-                                                                          data-toggle="tab">
-                                                        Test Dataset<i class="icon-database-insert position-right"></i></a>
-                                                    </li>
-                                                    <li><a href="#top-justified-divided-tab2" data-toggle="tab">
-                                                        My Dataset<i
-                                                            class="icon-database-insert position-right"></i></a>
-                                                    </li>
-                                                    <li><a href="#top-justified-divided-tab3" data-toggle="tab">
-                                                        Load Dataset <i class="icon-database position-right"></i></a>
-                                                    </li>
-                                                </ul>
 
-                                                <div class="tab-content">
-                                                    <div class="tab-pane active" id="top-justified-divided-tab1">
-                                                        <div class="panel-heading">
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <div class="col-md-10 col-md-offset-1">
-                                                                    <div class="form-group">
-                                                                        <label class="col-lg-3 control-label">Test
-                                                                            Dataset:</label>
-                                                                        <div class="col-lg-9">
-                                                                            <select data-placeholder="Select your state"
-                                                                                    class="select form-control">
-                                                                                <option value="AK">DATASE 1</option>
-                                                                                <option value="HI">DATASET 2</option>
-                                                                                <option value="HI">DATASET 3</option>
-                                                                                <option value="HI">DATASET 4</option>
-                                                                                <option value="HI">DATASET 5</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
+                                        <h3>INFORME PERIODICO DEL VALOR GANADO</h3>
+                                        <h5>Nombre del projecto</h5>
+                                        <div class="table-responsive pre-scrollable">
+                                            <table class="table table-bordered table-hover datatable-highlight">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Periodo</td>
+                                                    <td></td>
+                                                    <td>Contratista</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contratante</td>
+                                                    <td></td>
+                                                    <td>Director de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gerente de proyectos</td>
+                                                    <td></td>
+                                                    <td>Residente de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Supervisor o interventor</td>
+                                                    <td></td>
+                                                    <td>Residente supervisor</td>
+                                                    <td></td>
+                                                </tr>
 
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                        <h5>Cuadro resumen <span class="small text-danger">(datos de entrada)</span></h5>
+                                        <div class="hot-container has-scroll">
+                                            <div id="hot_scroll"></div>
+                                        </div>
+                                        <hr>
+                                        <h5>Cuadro de Formulas</h5>
+                                        <div class="table-responsive pre-scrollable">
+                                            <table class="table table-bordered table-hover datatable-highlight">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Periodo</td>
+                                                    <td></td>
+                                                    <td>Contratista</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contratante</td>
+                                                    <td></td>
+                                                    <td>Director de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gerente de proyectos</td>
+                                                    <td></td>
+                                                    <td>Residente de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Supervisor o interventor</td>
+                                                    <td></td>
+                                                    <td>Residente supervisor</td>
+                                                    <td></td>
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                        <h5>Graficos</span></h5>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
                                                     </div>
-                                                    <div class="tab-pane" id="top-justified-divided-tab2">
-                                                        <div class="panel-heading">
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <div class="col-md-10 col-md-offset-1">
-                                                                    <div class="form-group">
-                                                                        <label class="col-lg-3 control-label">My
-                                                                            Dataset:</label>
-                                                                        <div class="col-lg-9">
-                                                                            <select data-placeholder="Select your state"
-                                                                                    class="select form-control">
-                                                                                <option value="AK">DATASE 1</option>
-                                                                                <option value="HI">DATASET 2</option>
-                                                                                <option value="HI">DATASET 3</option>
-                                                                                <option value="HI">DATASET 4</option>
-                                                                                <option value="HI">DATASET 5</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="top-justified-divided-tab3">
-                                                        <div class="panel-heading">
-                                                            <div class="row">
-                                                                <div class="progress">
-                                                                    <div class="progress-bar progress-bar-striped active"
-                                                                         style="width: 50%">
-                                                                        <span>50% Complete</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <div class="col-md-10 col-md-offset-1">
-
-                                                                    <div class="form-group">
-                                                                        <label>Cargar archivo 10000GB:</label>
-                                                                        <div class="uploader">
-                                                                            <input type="file" class="file-styled"/>
-                                                                        </div>
-                                                                        <span class="help-block">Accepted formats: csv</span>
-                                                                    </div>
-
-                                                                    <div class="form-group">
-                                                                        <label>Nombre:</label>
-                                                                        <input type="text" class="form-control"
-                                                                               placeholder="Nombre del cvs">
-                                                                    </div>
-
-                                                                    <div class="form-group">
-                                                                        <label>Formato:</label>
-                                                                        <input type="password" class="form-control"
-                                                                               placeholder="formato">
-                                                                    </div>
-
-
-                                                                    <div class="form-group">
-                                                                        <label>Descripcion:</label>
-                                                                        <textarea rows="5" cols="5"
-                                                                                  class="form-control"
-                                                                                  placeholder="descripcion"></textarea>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>Productividad</span></h5>
                                     </div>
                                 </fieldset>
 
                                 <fieldset title="3">
-                                    <legend class="text-semibold">Data Dictionary</legend>
+                                    <legend class="text-semibold">Costo Real</legend>
 
                                     <div class="row">
 
@@ -291,7 +322,7 @@
                                 </fieldset>
 
                                 <fieldset title="4">
-                                    <legend class="text-semibold">Coins kass</legend>
+                                    <legend class="text-semibold">Valor Ganado</legend>
 
                                     <div class="row">
                                         <div class="panel-body">
@@ -347,7 +378,7 @@
                                 </fieldset>
 
                                 <fieldset title="5">
-                                    <legend class="text-semibold">Send</legend>
+                                    <legend class="text-semibold">Precios</legend>
 
                                     <div class="row">
                                         <br><br>
@@ -393,6 +424,22 @@
     <script>
         $(function () {
 
+            var hot_scroll_data = Handsontable.helper.createSpreadsheetData(5, 4);
+
+            // Define element
+            var hot_scroll = document.getElementById('hot_scroll');
+
+            // Initialize with options
+            var hot_scroll_init = new Handsontable(hot_scroll, {
+                data: hot_scroll_data,
+                stretchH: 'all',
+                rowHeaders: true,
+                colHeaders: true,
+            });
+
+        });
+        $(function () {
+
             $.fn.stepy.defaults.legend = false;
             $.fn.stepy.defaults.transition = 'fade';
             $.fn.stepy.defaults.duration = 150;
@@ -404,23 +451,10 @@
             });
 
             $('.stepy-step').find('.button-next').addClass('btn btn-primary');
-            $('.stepy-step').find('.button-back').addClass('btn btn-default');
-
-
-            var hot_scroll_data = Handsontable.helper.createSpreadsheetData(5, 4);
-
-            // Define element
-            var hot_scroll = document.getElementById('hot_scroll');
-
-            // Initialize with options
-            var hot_scroll_init = new Handsontable(hot_scroll, {
-                data: hot_scroll_data,
-                stretchH: 'all',
-                rowHeaders: true,
-                colHeaders: true
-            });
+            $('.stepy-step').find('.button-back').addClass('btn btn-default');            
 
         });
+        
     </script>
 {% endblock js_plugins_before %}
 
