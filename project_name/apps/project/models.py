@@ -9,11 +9,11 @@ class Project(BaseModel):
     description = models.TextField()
     periods = models.IntegerField()
     contractor = models.CharField(max_length=100)
-	resident = models.CharField(max_length=100)
-	supervisor = models.CharField(max_length=100)
-	execution_time = models.CharField(max_length=100)
-	start_date = models.DateTimeField()
-	end_date = models.DateTimeField()
+    resident = models.CharField(max_length=100)
+    supervisor = models.CharField(max_length=100)
+    execution_time = models.CharField(max_length=100)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
     
     class Meta:
         verbose_name = _("Project")

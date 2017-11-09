@@ -37,6 +37,7 @@ LOCAL_APPS = (
     'project_name.apps.user.apps.UserConfig',
     'project_name.apps.audit.apps.AuditConfig',
     'project_name.apps.help.apps.HelpConfig',
+    'project_name.apps.project.apps.ProjectConfig',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
