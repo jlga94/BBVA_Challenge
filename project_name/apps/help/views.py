@@ -1,8 +1,7 @@
-from django.shortcuts import render
+
 # Create your views here.
 from django.views.generic import TemplateView
 
-from django.views import generic
 from . import models
 
 # Create your views here.

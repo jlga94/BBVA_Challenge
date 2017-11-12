@@ -9,7 +9,7 @@
 *
 * ---------------------------------------------------------------------------- */
 
-var styles = [
+/*var styles = [
     'background: linear-gradient(#D33106, #571402)'
     , 'border: 1px solid #3E0E02'
     , 'color: white'
@@ -22,7 +22,7 @@ var styles = [
     , 'font-weight: bold'
 ].join(';');
 console.log('%c Console Deprecated for Hacker =)', styles);
-
+*/
 
 
 // $(window).on("beforeunload", function(e) {

@@ -82,7 +82,6 @@
                                             </div>
                                         </div>                                        
                                     </div>
-
                                 </fieldset>
 
                                 <fieldset title="2">
@@ -417,6 +416,8 @@
 
 {% block js_plugins_before %}
     <script>
+
+
         $(function () {
 
             var hot_scroll_data = Handsontable.helper.createSpreadsheetData(5, 4);
@@ -449,7 +450,40 @@
             $('.stepy-step').find('.button-back').addClass('btn btn-default');            
 
         });
-        
+
+        $(function () {
+            $('fieldset[title="1"] .stepy-navigator .btn').click(function() {
+                $.ajax({
+                    url: '/es/project/save/datos_generales',//'/es/project/save/datos_generales',
+                    data: {
+                        'username': 'prueba'
+                    },
+                    dataType: 'json',
+                    success: function (data) {                        
+                        console.log(data);
+                        alert("A user with this username already exists.");
+                        
+                    }
+                });
+            });
+        });
+        /*$("#id_username").change(function () {
+          var username = $(this).val();
+
+          $.ajax({
+            url: '/ajax/validate_username/',
+            data: {
+              'username': username
+            },
+            dataType: 'json',
+            success: function (data) {
+              if (data.is_taken) {
+                alert("A user with this username already exists.");
+              }
+            }
+          });
+
+        });*/
     </script>
 {% endblock js_plugins_before %}
 
