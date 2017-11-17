@@ -12,8 +12,8 @@ class Project(BaseModel):
     resident = models.CharField(max_length=100)
     supervisor = models.CharField(max_length=100)
     execution_time = models.CharField(max_length=100)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    start_date = models.DateField()
+    end_date = models.DateField()
     
     class Meta:
         verbose_name = _("Project")
