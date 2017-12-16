@@ -1,7 +1,6 @@
 {% extends "themes/dashboard/base_extension.html" %}
 {% load i18n %}
 {% load static %}
-{% load bootstrap3 %}
 <style type="text/css">
     #thodyxD {
         overflow-y: scroll;
@@ -29,52 +28,58 @@
                                         <div class="panel-body">
                                             <form id="form-proyect-1" class="form-horizontal">
                                                 {% csrf_token %}
-                                                {% bootstrap_form_errors form %}
-                                             
                                                 <div class="form-group">
-                                                    <div class="col-lg-12">
-                                                        {% bootstrap_field form.name %}
-                                                        <div id="id-error-{{form.name.name}}" class="no-padding"></div>
+                                                    <div class="col-lg-12">                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label" for="id_name">Nombre del Proyecto</label>
+                                                            <input type="text" name="name" maxlength="100" class="form-control" placeholder="Nombre del Proyecto" title="" required="" id="id_name" value="{{ project.name }}" >
+                                                        </div>
+                                                        <div id="id-error-name" class="no-padding"></div>
                                                     </div>                                                    
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-lg-12">
-                                                        {% bootstrap_field form.description %}
-                                                        <div id="id-error-{{form.description.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_description">Descripción</label><textarea name="description" cols="40" rows="3" class="form-control" placeholder="Descripción" title="" required="" id="id_description">{{ project.description }}</textarea></div>
+                                                        <div id="id-error-description" class="no-padding"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-lg-6">
-                                                        {% bootstrap_field form.periods %}
-                                                        <div id="id-error-{{form.periods.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_periods">Periodo de Control</label><input type="number" name="periods" class="form-control" placeholder="Periodo de Control" title="" required="" id="id_periods" value="{{ project.periods }}" ></div>
+                                                        <div id="id-error-periods" class="no-padding"></div>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        {% bootstrap_field form.contractor %}
-                                                        <div id="id-error-{{form.contractor.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_contractor">Contratista</label><input type="text" name="contractor" maxlength="100" class="form-control" placeholder="Contratista" title="" required="" id="id_contractor" value="{{ project.contractor }}" ></div>
+                                                        <div id="id-error-contractor" class="no-padding"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-lg-6">
-                                                        {% bootstrap_field form.resident %}
-                                                        <div id="id-error-{{form.resident.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_resident">Residente</label><input type="text" name="resident" maxlength="100" class="form-control" placeholder="Residente" title="" required="" id="id_resident" value="{{ project.resident }}" ></div>
+                                                        <div id="id-error-resident" class="no-padding"></div>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        {% bootstrap_field form.supervisor %}
-                                                        <div id="id-error-{{form.supervisor.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_supervisor">Supervisor</label><input type="text" name="supervisor" maxlength="100" class="form-control" placeholder="Supervisor" title="" required="" id="id_supervisor" value="{{ project.supervisor }}" ></div>
+                                                        <div id="id-error-supervisor" class="no-padding"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-lg-4">
-                                                        {% bootstrap_field form.execution_time %}
-                                                        <div id="id-error-{{form.execution_time.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_execution_time">Plazo de Ejecución</label><input type="text" name="execution_time" maxlength="100" class="form-control" placeholder="Plazo de Ejecución" title="" required="" id="id_execution_time" value="{{ project.execution_time }}" ></div>
+                                                        <div id="id-error-execution_time" class="no-padding"></div>
                                                     </div>
                                                     <div class="col-lg-4">
-                                                        {% bootstrap_field form.start_date %}
-                                                        <div id="id-error-{{form.start_date.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_start_date">Inicio de Proyecto</label><input type="date" name="start_date" class="form-control" placeholder="Inicio de Proyecto" title="" required="" id="id_start_date" value="{{ project.start_date |date:'Y-m-d' }}" ></div>
+                                                        <div id="id-error-start_date" class="no-padding"></div>
                                                     </div>            
                                                     <div class="col-lg-4">
-                                                        {% bootstrap_field form.end_date %}
-                                                        <div id="id-error-{{form.end_date.name}}" class="no-padding"></div>
+                                                        <div class="form-group"><label class="control-label" for="id_end_date">Fin de Proyecto</label><input type="date" name="end_date" class="form-control" placeholder="Fin de Proyecto" title="" required="" id="id_end_date" value="{{ project.end_date |date:'Y-m-d' }}" ></div>
+                                                        <div id="id-error-end_date" class="no-padding"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        <button class="btn btn-primary stepy-finish" id="crear_proyecto" > Actualizar datos generales <i class="icon-check position-right"></i></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -197,10 +202,7 @@
 
                                 <fieldset title="3">
                                     <legend class="text-semibold">Costo Real</legend>
-
                                     <div class="row">
-
-
                                         <div class="table-responsive pre-scrollable">
                                             <table class="table">
                                                 <thead>

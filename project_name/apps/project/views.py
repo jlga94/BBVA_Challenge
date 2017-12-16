@@ -38,11 +38,16 @@ class ProjectDetailView(DetailView):
     """docstring for ProjectDetailView"""
     model = models.Project
     template_name = 'themes/pages/project/project_detail.html'
+    #queryset = models.Project.objects.all()
 
-    '''def get_context_data(self, **kwargs):
+
+    def get_context_data(self, **kwargs):
         context = super(ProjectDetailView, self).get_context_data(**kwargs)
-        context['now'] = "hola soy goku"
-        return context'''
+        #object = super(ProjectDetailView, self).get_object()
+        form = ProyectForm(self.request.GET or None)
+        context["form"] = form
+
+        return context
 
 def save_datos_generales(request): 
     # username = request.GET
