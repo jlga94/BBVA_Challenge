@@ -43,6 +43,7 @@
                                             <td>{{ item.end_date }}</td>
                                             <td>
                                                 <a href="{% url 'project_app:project-detail' item.id %}" class=" btn btn-primary btn-xs btn-icon" ><icon class="icon-pencil5"></icon></a>
+                                                <a  class="btn btn-primary btn-xs btn-icon"><icon class="icon-eye"></icon></a>
                                                 <a  class="btn btn-warning btn-xs btn-icon"><icon class="icon-trash"></icon></a>
                                         </tr>
                                     {% endfor %}
