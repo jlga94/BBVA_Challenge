@@ -30,7 +30,8 @@
                                         <th>Contratante</th>
                                         <th>Fecha de Inicio</th>
                                         <th>Fecha de Termino</th>
-                                        <th>Estado </th>
+                                        <th>Accion</th>
+                                        
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -40,7 +41,9 @@
                                             <td>{{ item.contractor }}</td>
                                             <td>{{ item.start_date }}</td>
                                             <td>{{ item.end_date }}</td>
-                                            <td><span class="label label-success">Active</span></td>
+                                            <td>
+                                                <a href="{% url 'project_app:project-detail' item.id %}" class=" btn btn-primary btn-xs btn-icon" ><icon class="icon-pencil5"></icon></a>
+                                                <a  class="btn btn-warning btn-xs btn-icon"><icon class="icon-trash"></icon></a>
                                         </tr>
                                     {% endfor %}
                                     </tbody>

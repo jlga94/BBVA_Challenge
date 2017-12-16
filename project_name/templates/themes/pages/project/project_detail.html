@@ -1,0 +1,518 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap3 %}
+<style type="text/css">
+    #thodyxD {
+        overflow-y: scroll;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+    }
+    .no-padding{
+        padding: 0px;
+    }
+</style>
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="content-group">
+
+                        <div class="panel panel-white">
+
+                            <div class="stepy-clickable" action="#">
+                                <fieldset title="1">
+                                    <legend class="text-semibold">Datos Generales</legend>
+                                    <div class="row">                      
+                                        <div class="panel-body">
+                                            <form id="form-proyect-1" class="form-horizontal">
+                                                {% csrf_token %}
+                                                {% bootstrap_form_errors form %}
+                                             
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        {% bootstrap_field form.name %}
+                                                        <div id="id-error-{{form.name.name}}" class="no-padding"></div>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        {% bootstrap_field form.description %}
+                                                        <div id="id-error-{{form.description.name}}" class="no-padding"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-6">
+                                                        {% bootstrap_field form.periods %}
+                                                        <div id="id-error-{{form.periods.name}}" class="no-padding"></div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        {% bootstrap_field form.contractor %}
+                                                        <div id="id-error-{{form.contractor.name}}" class="no-padding"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-6">
+                                                        {% bootstrap_field form.resident %}
+                                                        <div id="id-error-{{form.resident.name}}" class="no-padding"></div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        {% bootstrap_field form.supervisor %}
+                                                        <div id="id-error-{{form.supervisor.name}}" class="no-padding"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-4">
+                                                        {% bootstrap_field form.execution_time %}
+                                                        <div id="id-error-{{form.execution_time.name}}" class="no-padding"></div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        {% bootstrap_field form.start_date %}
+                                                        <div id="id-error-{{form.start_date.name}}" class="no-padding"></div>
+                                                    </div>            
+                                                    <div class="col-lg-4">
+                                                        {% bootstrap_field form.end_date %}
+                                                        <div id="id-error-{{form.end_date.name}}" class="no-padding"></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>                                       
+                                    </div>
+                                </fieldset>
+
+                                <fieldset title="2">
+                                    <legend class="text-semibold">Costo Presupuestado</legend>
+
+                                    <div class="row">
+
+                                        <h3>INFORME PERIODICO DEL VALOR GANADO</h3>
+                                        <h5>Nombre del projecto</h5>
+                                        <div class="table-responsive pre-scrollable">
+                                            <table class="table table-bordered table-hover datatable-highlight">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Periodo</td>
+                                                    <td></td>
+                                                    <td>Contratista</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contratante</td>
+                                                    <td></td>
+                                                    <td>Director de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gerente de proyectos</td>
+                                                    <td></td>
+                                                    <td>Residente de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Supervisor o interventor</td>
+                                                    <td></td>
+                                                    <td>Residente supervisor</td>
+                                                    <td></td>
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                        <h5>Cuadro resumen <span class="small text-danger">(datos de entrada)</span></h5>
+                                        <div class="hot-container has-scroll">
+                                            <div id="hot_scroll"></div>
+                                        </div>
+                                        <hr>
+                                        <h5>Cuadro de Formulas</h5>
+                                        <div class="table-responsive pre-scrollable">
+                                            <table class="table table-bordered table-hover datatable-highlight">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Periodo</td>
+                                                    <td></td>
+                                                    <td>Contratista</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contratante</td>
+                                                    <td></td>
+                                                    <td>Director de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gerente de proyectos</td>
+                                                    <td></td>
+                                                    <td>Residente de Obra</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Supervisor o interventor</td>
+                                                    <td></td>
+                                                    <td>Residente supervisor</td>
+                                                    <td></td>
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                        <h5>Graficos</span></h5>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-flat">
+                                                    <div class="panel-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>Productividad</span></h5>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset title="3">
+                                    <legend class="text-semibold">Costo Real</legend>
+
+                                    <div class="row">
+
+
+                                        <div class="table-responsive pre-scrollable">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Apply</th>
+                                                    <th class="text-center"><label class="checkbox-inline">
+                                                        <input type="checkbox" class="styled" checked="checked">
+                                                        ID
+                                                    </label></th>
+                                                    <th  class="text-center"><label class="checkbox-inline">
+                                                        <input type="checkbox" class="styled" checked="checked">
+                                                        nombre
+                                                    </label></th>
+                                                    <th  class="text-center"><label class="checkbox-inline">
+                                                        <input type="checkbox" class="styled" checked="checked">
+                                                       edad
+                                                    </label></th>
+                                                    <th class="text-center"><label class="checkbox-inline">
+                                                        <input type="checkbox" class="styled" checked="checked">
+                                                        sexo
+                                                    </label></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><b>Data Type</b></td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="HI">Real</option>
+                                                            <option value="HI">Text</option>
+                                                            <option value="HI">Polimonial</option>
+                                                            <option value="HI">Binominial</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="HI">Real</option>
+                                                            <option value="HI">Text</option>
+                                                            <option value="HI">Polimonial</option>
+                                                            <option value="HI">Binominial</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="HI">Real</option>
+                                                            <option value="HI">Text</option>
+                                                            <option value="HI">Polimonial</option>
+                                                            <option value="HI">Binominial</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="HI">Real</option>
+                                                            <option value="HI">Text</option>
+                                                            <option value="HI">Polimonial</option>
+                                                            <option value="HI">Binominial</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Rol</b></td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="AK">ID</option>
+                                                            <option value="AK">label</option>
+                                                            <option value="HI">Attribute</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="AK">ID</option>
+                                                            <option value="AK">label</option>
+                                                            <option value="HI">Attribute</option>
+                                                        </select>
+                                                    </td>
+
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="AK">ID</option>
+                                                            <option value="AK">label</option>
+                                                            <option value="HI">Attribute</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select data-placeholder="Select your state"
+                                                                class="select form-control">
+                                                            <option value="AK">ID</option>
+                                                            <option value="AK">label</option>
+                                                            <option value="HI">Attribute</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+
+                                        <div class="hot-container has-scroll">
+                                            <div id="hot_scroll"></div>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                </fieldset>
+
+                                <fieldset title="4">
+                                    <legend class="text-semibold">Valor Ganado</legend>
+
+                                    <div class="row">
+                                        <div class="panel-body">
+                                            <fieldset class="form-vertical">
+                                                <legend class="text-semibold"> Estructura Dataset</legend>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-lg-3 control-label">Filas:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control" value="1000">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-lg-3 control-label">Columnas:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control" value="3555">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <legend class="text-semibold">Cuenta Cliente</legend>
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label">Saldo Coin-kass
+                                                        Actual:</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" value="1000">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label">Requerimiento:</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" value="500">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label">Saldo a queda:</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" value="500">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
+                                        </div>
+
+
+                                    </div>
+                                </fieldset>
+
+                                <fieldset title="5">
+                                    <legend class="text-semibold">Precios</legend>
+
+                                    <div class="row">
+                                        <br><br>
+                                        <div class="text-center">
+                                            <div><span class="text-center">Esta procediendo el envio</span></div>
+                                            <div class="pace-demo" style="padding-top: 10px; padding-bottom: 30px;">
+                                                <div class="theme_tail_circle theme_tail_with_text">
+                                                    <div class="pace_progress" data-progress-text="60%"
+                                                         data-progress="60"></div>
+                                                    <div class="pace_activity"></div>
+                                                    <span>60%</span>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                    </div>
+                                </fieldset>
+                                <br>
+
+                                <button type="submit" class="btn btn-primary stepy-finish">Submit <i
+                                        class="icon-check position-right"></i></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock sidebar1_page %}
+
+
+{% block js_plugins_after %}
+    <script src="{% static 'themes/global/forms/wizards/stepy.min.js' %}"></script>
+    <script src="{% static 'themes/global/tables/handsontable/handsontable.full.min.js' %}"></script>
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+    <script>
+
+
+        $(function () {
+
+            var hot_scroll_data = Handsontable.helper.createSpreadsheetData(5, 4);
+
+            // Define element
+            var hot_scroll = document.getElementById('hot_scroll');
+
+            // Initialize with options
+            var hot_scroll_init = new Handsontable(hot_scroll, {
+                data: hot_scroll_data,
+                stretchH: 'all',
+                rowHeaders: true,
+                colHeaders: true,
+            });
+
+        });
+        $(function () {
+
+            $.fn.stepy.defaults.legend = false;
+            $.fn.stepy.defaults.transition = 'fade';
+            $.fn.stepy.defaults.duration = 150;
+            $.fn.stepy.defaults.backLabel = '<i class="icon-arrow-left13 position-left"></i> Back';
+            $.fn.stepy.defaults.nextLabel = 'Next <i class="icon-arrow-right14 position-right"></i>';
+
+            $(".stepy-clickable").stepy({
+                titleClick: true
+            });
+
+            $('.stepy-step').find('.button-next').addClass('btn btn-primary');
+            $('.stepy-step').find('.button-back').addClass('btn btn-default');            
+
+        });
+
+        $(function () {
+            $('fieldset[title="1"] .stepy-navigator .btn').click(function() {
+                data_form = $('#form-proyect-1').serialize();
+                console.log(data_form);
+                $.ajax({
+                    url: '/es/project/save/dg',//'/es/project/save/datos_generales',
+                    data: data_form,
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if(data['form_is_valid']){
+                            alert("Los datos del proyecto se ha guardado correctamente");
+                        }else{
+                            $.each($.parseJSON(data['form_errors']), function(id_input, errors) {
+                                $.each(errors, function(j, item) {
+                                    $('#id-error-'+id_input).html('<div class="alert alert-info alert-styled-left alert-bordered" style="padding: 0px;margin-bottom: 0px;"><button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button><p>'+item['message']+'</p></div>');
+                                });
+                            });
+
+                            $('.stepy-clickable').stepy('step', 1); 
+                            /*
+                            $('#id_'+id_input).after('<div style="font-size: 9px;"><br><div class="alert alert-danger alert-dismissible fade in" role="alert" style="padding: 10px;margin-bottom: 10px;"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> '+item['message']+'</div></div>');
+                            name
+                            description
+                            periods
+                            contractor
+                            resident
+                            supervisor
+                            execution_time
+                            start_date
+                            end_date
+                            {
+                                "name": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "periods": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "contractor": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "resident": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "supervisor": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "execution_time": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "start_date": [{"message": "Este campo es obligatorio.", "code": "required"}], 
+                                "end_date": [{"message": "Este campo es obligatorio.", "code": "required"}]
+                            }*/
+                        }
+                    }
+                });
+            });
+        });
+        /*$("#id_username").change(function () {
+          var username = $(this).val();
+
+          $.ajax({
+            url: '/ajax/validate_username/',
+            data: {
+              'username': username
+            },
+            dataType: 'json',
+            success: function (data) {
+              if (data.is_taken) {
+                alert("A user with this username already exists.");
+              }
+            }
+          });
+
+        });*/
+    </script>
+
+{% endblock js_plugins_before %}
+

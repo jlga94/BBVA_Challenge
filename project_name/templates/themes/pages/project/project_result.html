@@ -1,0 +1,9 @@
+<h1>{{ project.name }}</h1>
+
+<ul>
+{% for choice in project.costopre_set.all %}
+    <li>{{ choice.periodo }} -- {{ choice.periodo }} vote{{ choice.periodo|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'project_app:project-detail' project.id %}">Vote again?</a>

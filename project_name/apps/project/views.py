@@ -1,5 +1,5 @@
 # Create your views here.
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,DetailView
 from . import models
 from django.http import JsonResponse
 from .forms import ProyectForm
@@ -18,7 +18,12 @@ class ProjectView(TemplateView):
         context["form"] = form
         return context
 
+class ProjectResultsView(DetailView):
+    model = models.Project
+    template_name = 'themes/pages/project/project_result.html'
+
 class ProjectListView(TemplateView):
+    model = models.Project
     template_name = 'themes/pages/project/project_list.html'
 
     def get(self, request, *args, **kwargs):
@@ -28,6 +33,16 @@ class ProjectListView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["project"] = models.Project.objects.all() 
         return context
+        
+class ProjectDetailView(DetailView):
+    """docstring for ProjectDetailView"""
+    model = models.Project
+    template_name = 'themes/pages/project/project_detail.html'
+
+    '''def get_context_data(self, **kwargs):
+        context = super(ProjectDetailView, self).get_context_data(**kwargs)
+        context['now'] = "hola soy goku"
+        return context'''
 
 def save_datos_generales(request): 
     # username = request.GET

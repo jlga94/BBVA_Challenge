@@ -22,3 +22,20 @@ class Project(BaseModel):
 
     def __str__(self):
         return self.name
+
+class CostoPre(BaseModel):
+# Create your models here.
+    
+    periodo = models.CharField(max_length=100)
+    valor_planificado = models.TextField()
+    valor_ganado = models.IntegerField()
+    valor_real = models.CharField(max_length=100)
+    projecto = models.ForeignKey(Project, on_delete=models.CASCADE)   
+    
+    class Meta:
+        verbose_name = _("CostoPre")
+        verbose_name_plural = _("CostoPre")
+        unique_together = ['periodo']
+
+    def __str__(self):
+        return self.periodo

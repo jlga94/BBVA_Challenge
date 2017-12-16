@@ -3,12 +3,12 @@
 
 from django.conf import settings
 from django.conf.urls import url, include
-from django.conf.urls.i18n import i18n_patterns
+#from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
 
-urlpatterns = i18n_patterns(
+urlpatterns = [
     url(settings.ADMIN_URL, include(admin.site.urls)),
     url(r'^', include('project_name.apps.core.urls')),
     url(r'^', include('allauth.urls')),
@@ -20,11 +20,10 @@ urlpatterns = i18n_patterns(
     url(r'^', include('project_name.apps.transaction.urls', namespace="transaction_app")),
     url(r'^', include('project_name.apps.team.urls', namespace="team_app")),
 
-)
+]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

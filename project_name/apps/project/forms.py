@@ -13,7 +13,6 @@ class ProyectForm(forms.ModelForm):
             'end_date': forms.TextInput(attrs={'type':'date'}),
         }
         labels = {
-            'name': _('Writer'),
             'name': _('Nombre del Proyecto'),
 			'description': _('Descripción'),
 			'periods': _('Periodo de Control'),
