@@ -11,12 +11,49 @@
 
                             <div class="panel-body">
                                     <div class="text-center">
-                                         <h1>EVM PARA CONSTRUCCION</h1>
+                                         <h1>Pago de servicios</h1>
                                             <br>
-                                             <p>   
-                                                La gestión del valor ganado es una técnica de gestión de proyectos que   permite controlar la ejecución de un proyecto a través de su presupuesto y de su calendario de ejecución.
-                                                Compara la cantidad de trabajo ya completada en un momento dado con la estimación realizada antes del comienzo del proyecto. De este modo, se tiene una medida de cuánto trabajo se ha realizado, cuanto queda para finalizar el proyecto y extrapolando a partir del esfuerzo invertido en el proyecto, el jefe de proyecto puede estimar los recursos que se emplearán para finalizar el proyecto.
-                                            </p>
+                                             <form id="form-proyect-1" class="form-horizontal">
+                                                
+                                                {% csrf_token %}
+                                             
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        <div class="col-lg-3 form-group">
+                                                            <label>Tipo Documento</label>
+                                                            <select class="form-control">
+                                                                <option>DNI</option>
+                                                                <option>Carnet de extrangeria</option>
+                                                                <option>Libreta Militar</option>
+                                                            </select>
+                                                            
+                                                        </div>
+
+                                                        <div class="col-lg-3 form-group">
+                                                            <label>Numero documento</label>
+                                                             <input type="text" class="form-control" value="71718406">
+                                                        </div>
+
+                                                        <div class="col-lg-3 form-group">
+                                                            <label>Empresa pagar</label>
+                                                            
+                                                            <select class="form-control">
+                                                                <option>Bitel</option>
+                                                                <option>Movistar</option>
+                                                                <option>Claro</option>
+                                                                <option>Entel</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">                                                           
+                                                            
+                                                            <label>Acción</label>
+                                                            <a href="lista-pagos/" class="form-control btn-success"> Ver Pagos </a>
+                                                        </div>
+
+                                                    </div>
+                                                                                               
+                                                </div>
+                                            </form>
                                     </div>
                             </div>
 

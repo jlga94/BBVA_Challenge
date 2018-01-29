@@ -1,0 +1,59 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="content-group">
+
+                      <div class="form1"><form id="form" method="post"></form> 
+                        <center><label>Bienvenido al formulario PayPal</label> </center>
+                        <div class="col-lg-12 form-group">
+                          <label for="male">N&uacute;mero de tarjeta :</label> 
+                          <input class="form-control" id="txtTarjeta" maxlength="16" required="true" type="text" align="left" /> 
+                        </div> 
+                        <div class="col-lg-12 form-group">
+                          <label for="male">C&oacute;digo CSV :</label> 
+                          <input class="form-control" id="txtCSV" maxlength="3" required="true" type="text" align="left" /> 
+                         </div> 
+                         <div class="col-lg-12 form-group">
+                          <label for="male">Datos del titular de la tarjeta </label>
+                          <label for="male">Apellidos :</label>
+                          <input class="form-control"  id="txtApellidos" name="Apellidos" required="true" type="text" align="left"/>
+                           </div> 
+                          <div class="col-lg-12 form-group">
+                          <label for="male">Nombres :</label> 
+                          <input class="form-control" id="txtNombres" name="Nombres" required="true" type="text" align="left" /> 
+                          <div class="col-lg-12 form-group">
+                          <label for="male">Correo electr&oacute;nico :</label> 
+                          <input class="form-control" id="txtCorreo" required="true" type="text" value="" />
+                          </div>
+                        </div>
+                        <div class="col-lg-12 form-group">
+                          <a href="/detalle-pago/" class="form-control btn-success">
+                            Realizar Pago                            
+                          </a>
+                        </div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock sidebar1_page %}
+
+
+
+{% block js_plugins_after %}
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+{% endblock js_plugins_before %}
+

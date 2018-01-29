@@ -1,0 +1,110 @@
+{% extends "themes/dashboard/base_extension.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar1_page %}
+    <div class="container-detached">
+        <div class="content-detached">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        Código de la operación: <input type="text" class="form-control" id="usr" value="000717456">
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Entidad</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Moneda</th>
+            <th scope="col">Importe</th>
+            <th scope="col">Fecha de pago</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Movistar</td>
+            <td>Cable Mágico</td>
+            <td>S/.</td>
+            <td>150.50</td>
+            <td>28/01/2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Comisión</th>
+                <th scope="col">Importe total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S/. 2.00</td>
+                <td>S/. 20.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Acepto términos y condiciones</label>
+          </div>        
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Envío SMS</label>
+            <br>
+            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+            <label class="form-check-label" for="exampleCheck1">Envío correo</label>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-6">
+          <div class="pull-right">
+            <button class="btn btn-primary" type="submit">
+              <i class="fa fa-floppy-o" aria-hidden="true"></i> Aceptar
+            </button>
+            <a href="#" class="btn btn-info">
+              <i class="fa fa-reply" aria-hidden="true"></i> Cancelar
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock sidebar1_page %}
+
+
+
+{% block js_plugins_after %}
+{% endblock js_plugins_after %}
+
+{% block js_plugins_before %}
+{% endblock js_plugins_before %}
+

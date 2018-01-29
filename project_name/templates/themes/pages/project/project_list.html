@@ -12,7 +12,7 @@
 
                         <div class="panel panel-flat">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Listado Projectos<a
+                                <h3 class="panel-title">Listado Pagos Pedientes<a
                                         class="heading-elements-toggle"><i class="icon-more"></i></a>
                                 </h3>
                                 <div class="heading-elements">
@@ -26,25 +26,27 @@
                                 <table class="table table-bordered table-hover datatable-highlight">
                                     <thead>
                                     <tr>
-                                        <th>Nombre del Projecto</th>
-                                        <th>Contratante</th>
-                                        <th>Fecha de Inicio</th>
-                                        <th>Fecha de Termino</th>
-                                        <th>Accion</th>
+                                        <th>Cod Concepto</th>
+                                        <th>Descripción</th>
+                                        <th>Moneda</th>
+                                        <th>Importe</th>
+                                        <th>Fecha de Vencimiento</th>
+                                        <th>Acción</th>
                                         
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for item in project %}
+                                    {% for item in pagos %}
                                         <tr>
-                                            <td>{{ item.name }}</td>
-                                            <td>{{ item.contractor }}</td>
-                                            <td>{{ item.start_date }}</td>
-                                            <td>{{ item.end_date }}</td>
+                                            <td>{{ item.cod_concepto }}</td>
+                                            <td>{{ item.nb_concepto }}</td>
+                                            <td>{{ item.cd_moneda }}</td>
+                                            <td>{{ item.nu_importe }}</td>
+                                            <td>{{ item.fec_vcto }}</td>
                                             <td>
-                                                <a href="{% url 'project_app:project-detail' item.id %}" class=" btn btn-primary btn-xs btn-icon" ><icon class="icon-pencil5"></icon></a>
+                                                <a href="{% url 'project_app:vista-pagos' %}" class=" btn btn-primary btn-xs btn-icon" ><icon class="glyphicon glyphicon-shopping-cart"></icon></a>
                                                 <a  class="btn btn-primary btn-xs btn-icon"><icon class="icon-eye"></icon></a>
-                                                <a  class="btn btn-warning btn-xs btn-icon"><icon class="icon-trash"></icon></a>
+                                            </td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
